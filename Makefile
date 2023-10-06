@@ -25,3 +25,12 @@ test:
 mocks:
 	go install github.com/vektra/mockery/v2@latest
 	mockery --with-expecter --disable-version-string --all --output internal/mocks
+
+align:
+	- fieldalignment -fix ./...		
+
+imports:
+	goimports -w .
+
+format:
+	go fmt ./...	
